@@ -8,6 +8,8 @@ import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
+import Eat from "../assets/img/eat_ch.png";
+import React from "../assets/img/React.png";
 
 export const NavBar = () => {
 
@@ -50,13 +52,14 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+
+
+<div className="naveatcontainer">
+             <a href="https://www.eat.ch/restaurant-name" target="_blank" className="social-icon">
+                            <img className="eatlogo" src={Eat} alt="Image"></img> <p className="navbestellen"> Bestelle Online</p></a>
+  </div>
               </div>
-              <HashLink to='#connect'>
-                <button className="vvd"><span>Let’s Connect</span></button>
-              </HashLink>
+
             </span>
           </Navbar.Collapse>
         </Container>

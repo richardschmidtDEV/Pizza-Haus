@@ -1,30 +1,14 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
-import JS from "../assets/img/JS2.png"
 import React from "../assets/img/React.png"
-import MongoDB from "../assets/img/MongoDB.png"
-import SQL from "../assets/img/SQL.png"
-import Django from "../assets/img/Django.png"
-import API from "../assets/img/API.png"
-import Bootstrap from "../assets/img/Bootstrap.png"
-import Docker from "../assets/img/Docker.png"
-import Kubernetes from "../assets/img/Kubernetes.png"
-import Azure from "../assets/img/azure.png"
-import AWS from "../assets/img/AWS.png"
-import AI from "../assets/img/AI.png"
-import ML from "../assets/img/ML.png"
-import DL from "../assets/img/DL.png"
-import Python from "../assets/img/Python.png"
+import Pizza from "../assets/img/pizza.png"
+import Eat from "../assets/img/eat_ch.png"
+import Insalate from "../assets/img/insalatepng.png"
+import {Col, Container, Nav, Row, Tab} from "react-bootstrap";
+import TrackVisibility from "react-on-screen";
+import {ProjectCard} from "./ProjectCard";
 
-
-
-export const Skills = () => {
+export const Karte = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -44,99 +28,270 @@ export const Skills = () => {
       items: 2
     }
   };
-
+let eatbutton = <a href="https://www.eat.ch/restaurant-name" target="_blank" className="eat-button">
+    <img className="eatlogo" src={Eat} alt="Image"></img></a>
   return (
-    <section className="skill" id="skills">
+
+    <section className="karte" id="skills">
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <section className="menu-card">
-                            <h2>Menu</h2>
-                            <ul>
-                                <li>
-                                    <img src="dish1.jpg" alt="Dish 1" />
-                                    <p>Dish 1 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish2.jpg" alt="Dish 2" />
-                                    <p>Dish 2 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish3.jpg" alt="Dish 3" />
-                                    <p>Dish 3 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish1.jpg" alt="Dish 1" />
-                                    <p>Dish 1 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish2.jpg" alt="Dish 2" />
-                                    <p>Dish 2 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish3.jpg" alt="Dish 3" />
-                                    <p>Dish 3 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish1.jpg" alt="Dish 1" />
-                                    <p>Dish 1 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish2.jpg" alt="Dish 2" />
-                                    <p>Dish 2 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish3.jpg" alt="Dish 3" />
-                                    <p>Dish 3 - Description</p>
-                                </li>
-                            </ul>
+                    <div className="karte-bx wow zoomIn">
+                        <Container>
+                            <Row>
+                                <Col size={12}>
+                                    <TrackVisibility>
+                                        {({ isVisible }) =>
+                                            <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
+                                                <h2>Menu</h2>
+                                                <Tab.Container id="karte-tabs" defaultActiveKey="first">
+                                                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
 
-                        </section>
-                        <section className="menu-card">
-                            <h2>Menu</h2>
-                            <ul>
-                                <li>
-                                    <img src="dish1.jpg" alt="Dish 1" />
-                                    <p>Dish 1 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish2.jpg" alt="Dish 2" />
-                                    <p>Dish 2 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish3.jpg" alt="Dish 3" />
-                                    <p>Dish 3 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish1.jpg" alt="Dish 1" />
-                                    <p>Dish 1 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish2.jpg" alt="Dish 2" />
-                                    <p>Dish 2 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish3.jpg" alt="Dish 3" />
-                                    <p>Dish 3 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish1.jpg" alt="Dish 1" />
-                                    <p>Dish 1 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish2.jpg" alt="Dish 2" />
-                                    <p>Dish 2 - Description</p>
-                                </li>
-                                <li>
-                                    <img src="dish3.jpg" alt="Dish 3" />
-                                    <p>Dish 3 - Description</p>
-                                </li>
-                            </ul>
+                                                        <Nav.Item>
+                                                            <Nav.Link eventKey="first">Pizza</Nav.Link>
+                                                        </Nav.Item>
+                                                        <Nav.Item>
+                                                            <Nav.Link eventKey="second">Insalate</Nav.Link>
+                                                        </Nav.Item>
+                                                        <Nav.Item>
+                                                            <Nav.Link eventKey="third">Desserts</Nav.Link>
+                                                        </Nav.Item>
+                                                        <Nav.Item>
+                                                            <Nav.Link eventKey="four">Getränke</Nav.Link>
+                                                        </Nav.Item>
+                                                    </Nav>
+                                                    <div className="parallaxcontainer">
+                                                    <div className="parallax">
+                                                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
 
-                        </section>
-                        <a href="https://www.eat.ch/restaurant-name" target="_blank" className="eat-button">Visit eat.ch</a>
+                                                        <Tab.Pane eventKey="first">
+
+                                                            <section className="menu-card">
+                                                                <img className="pizzapng" src={Pizza} alt="Dish 1" />
+                                                                <ul>
+                                                                    <li>
+
+                                                                        <p>Pizza Margherita</p>
+                                                                        <p>Tomatensauce, Mozzarella</p>
+                                                                        <p className="price">15.00-</p>
+                                                                        {eatbutton}
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Funghi</p>
+                                                                        <p>Tomatensauce, Mozzarella, Champignons</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Napoletana</p>
+                                                                        <p>Tomatensauce, Mozzarella, Sardellen</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Siciliana</p>
+                                                                        <p>Tomatensauce, Mozzarella, Oliven, Kapern, Sardellen</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Salami</p>
+                                                                        <p>Tomatensauce, Mozzarella, Salami</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Prosciutto</p>
+                                                                        <p>Tomatensauce, Mozzarella, Schinken</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Prosciutto é funghi</p>
+                                                                        <p>Tomatensauce, Mozzarella, Schinken, Champignons</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Vegetariana</p>
+                                                                        <p>Tomatensauce, Mozzarella, Tagesgenüse</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Nonno</p>
+                                                                        <p>Tomatensauce, Mozzarella, scharfe Salami, Zwiebeln, Knoblauch</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Diavola</p>
+                                                                        <p>Tomatensauce, Mozzarella, scharfe Salami, Pepperoni</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Pizza House</p>
+                                                                        <p>Tomatensauce, Mozzarella, Rucola, Cherrytomaten, Parmesan</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Rustica</p>
+                                                                        <p>Tomatensauce, Mozzarella, Speck, Zwiebeln, Knoblauch</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Tonno</p>
+                                                                        <p>Tomatensauce, Mozzarella, Thunfisch, Zwiebeln</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Gorgonzola é spinaci</p>
+                                                                        <p>Tomatensauce, Mozzarella, Gorgonzola, Spinat</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Contadina</p>
+                                                                        <p>Tomatensauce, Mozzarella, Spinat, Ei, Zwiebeln, Knoblauch</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Cappricciosa</p>
+                                                                        <p>Tomatensauce, Mozzarella, Schinken, Champignons, Artischocken</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Fiorentina</p>
+                                                                        <p>Tomatensauce, Mozzarella, Speck, Zwiebeln, Knoblauch, Spinat</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Quattro Stagioni</p>
+                                                                        <p>Tomatensauce, Mozzarella, Schinken, Champignons, Pepperoni, Artischocken</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Padrone</p>
+                                                                        <p>Tomatensauce, Mozzarella, Schinken, Champignons, Spinat, Gorgonzola, Knoblauch</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Parma</p>
+                                                                        <p>Tomatensauce, Mozzarella, Parmaschinken, Rucola</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Quattro Formaggi</p>
+                                                                        <p>Vier verschieden Käsesorten</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Pollo</p>
+                                                                        <p>Tomatensauce, Mozzarella, Poulet, Pepperoni</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Pollo</p>
+                                                                        <p>Tomatensauce, Mozzarella, Poulet, Pepperoni</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </section>
+                                                        </Tab.Pane>
+                                                        <Tab.Pane eventKey="second">
+                                                            <section className="menu-card">
+                                                                <img className="insalatepng" src={Insalate} alt="Dish 1" />
+                                                                <ul>
+                                                                    <li>
+
+                                                                        <p>Pizza Margherita</p>
+                                                                        <p>Tomatensauce, Mozzarella</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Funghi</p>
+                                                                        <p>Tomatensauce, Mozzarella, Champignons</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Pizza Napoletana</p>
+                                                                        <p>Tomatensauce, Mozzarella, Sardellen</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Siciliana</p>
+                                                                        <p>Tomatensauce, Mozzarella, Oliven, Kapern, Sardellen</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+                                                                    <li>
+
+                                                                        <p>Pizza Salami</p>
+                                                                        <p>Tomatensauce, Mozzarella, Salami</p>
+                                                                        <p className="price">15.00-</p>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </section>
+                                                        </Tab.Pane>
+                                                        <Tab.Pane eventKey="third">
+                                                            <section className="menu-card">
+                                                                <h2>Menu</h2>
+                                                                <ul>
+                                                                    <li>
+                                                                        <img src="dish1.jpg" alt="Dish 1" />
+                                                                        <p>Dish 1 - Description</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="dish2.jpg" alt="Dish 2" />
+                                                                        <p>Dish 2 - Description</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="dish3.jpg" alt="Dish 3" />
+                                                                        <p>Dish 3 - Description</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </section>
+                                                        </Tab.Pane>
+                                                        <Tab.Pane eventKey="four">
+                                                            <section className="menu-card">
+
+                                                                <ul>
+                                                                    <li>
+                                                                        <img src="dish1.jpg" alt="Dish 1" />
+                                                                        <p>Pizza Margeri - Description</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="dish2.jpg" alt="Dish 2" />
+                                                                        <p>Dish 2 - Description</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="dish3.jpg" alt="Dish 3" />
+                                                                        <p>Dish 3 - Description</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </section>
+
+                                                        </Tab.Pane>
+                                                    </Tab.Content>
+                                                    </div>
+                                                    </div>
+
+                                                </Tab.Container>
+                                            </div>}
+                                    </TrackVisibility>
+                                </Col>
+                            </Row>
+                        </Container>
+
+
+    <a href="https://www.eat.ch/restaurant-name" target="_blank" className="eat-button">
+                            <img className="eatlogo" src={Eat} alt="Image"></img></a>
 
                     </div>
                 </div>
@@ -144,5 +299,6 @@ export const Skills = () => {
         </div>
         <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
+
   )
 }

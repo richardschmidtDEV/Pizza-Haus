@@ -16,6 +16,21 @@
 }
 
 /************ Default Css ************/
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollhost-container {
+  position: relative;
+  height: 100%;
+}
+.body {
+  overflow: auto;
+  height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+}
 * {
   margin: 0;
   padding: 0;
@@ -25,22 +40,30 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body {
   font-weight: 400;
-  overflow-x: hidden;
+
   position: relative;
+  overflow: auto;
+  height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
   background-color: #121212 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
 
+
 h1{
-  background-color: #8000ff5a;
+  background-color: rgba(255, 0, 0, 0.61);
   border: #fff;
   color: rgb(7, 7, 7);
-  text-shadow: 1px 1px 5px rgb(21, 255, 0);
+  text-shadow: 1px 1px 5px rgb(255, 145, 0);
   
 }
 
@@ -107,6 +130,21 @@ nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
+.naveatcontainer {
+scale: 120%;
+  display: flex;
+  color: #00ffc4;
+}
+.naveatcontainer:hover {
+  transform: scale(150%);
+
+  color: #00ffc4;
+}
+.navbestellen{
+  color: #00ffc4;
+  margin-top: 15px;
+  font-size: 9pt;
+}
 nav.navbar a.navbar-brand {
     width: 9%;
 }
@@ -131,11 +169,11 @@ span.navbar-text {
     margin-left: 14px;
 }
 .social-icon a {
-    width: 42px;
+    width: 82px;
     height: 42px;
     background: rgba(217, 217, 217, 0.1);
     display: inline-flex;
-    border-radius: 50%;
+    border-radius: 2vh;
     margin-right: 6px;
     align-items: center;
     justify-content: center;
@@ -144,16 +182,17 @@ span.navbar-text {
 }
 .social-icon a::before {
     content: "";
-    width: 42px;
+    width: 62px;
     height: 42px;
     position: absolute;
-    background-color: #ffffff;
-    border-radius: 50%;
+    background-color: rgba(255, 98, 0, 0.09);
+  border-radius: 2vh;
     transform: scale(0);
 	transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
-    transform: scale(1);
+    transform: scale(2);
+  border-radius: 2vh;
 }
 .social-icon a img {
 	width: 40%;
@@ -161,7 +200,7 @@ span.navbar-text {
 	transition: 0.3s ease-in-out;
 }
 .social-icon a:hover img {
-	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+  border-radius: 2vh;
 }
 .navbar-text button {
   font-weight: 700;
@@ -189,7 +228,7 @@ span.navbar-text {
   transition: 0.3s ease-in-out;
 }
 .navbar-text button:hover {
-  color: #121212;
+  color: #ff4d00;
 }
 .navbar-text button:hover::before {
 	content: "";
@@ -210,6 +249,7 @@ nav.navbar .navbar-toggler-icon {
   border-bottom: 2px solid #fff;
   transition: all 300ms linear;
   top: -2px;
+  border-radius: 2vh;
 }
 nav.navbar .navbar-toggler-icon:focus {
 	border-bottom: 2px solid #fff;
@@ -231,12 +271,12 @@ nav.navbar .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
 	transform: rotate(45deg);
-	background-color: #fff;
+	background-color: #ff6200;
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 	transform: translateY(8px) rotate(-45deg);
-	background-color: #fff;
+	background-color: #ff5900;
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
@@ -247,16 +287,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/bg2.jpg');
+  background-image: url('./assets/img/pizzabg.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+
+
 }
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(255, 255, 255, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(255,0,0,0.58) -5.91%, rgba(255, 128, 0, 0.76) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -297,6 +339,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner img {
   animation: updown 3s linear infinite;
+
+
 }
 @keyframes updown {
     0% {
@@ -314,89 +358,87 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
-.skill {
-  padding: 0 0 0px 0;
-  position: relative;
-}
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-  display: flex;
-}
-.skill h2 {
-	font-size: 45px;
-	font-weight: 700;
-}
-
-.IMGMDB {
-  size: 900px, 900px;
-}
-
-.skill p {
-    color: #B8B8B8;
-    padding: auto;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
-}
-.skill-slider {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  padding: 5em;
-  
-}
-.skill-slider .item img {
-  width: 50%;
-  margin: 10px auto 5px auto;
-  max-width: 80px;
-  min-width: 80px;
-  max-height: 80px;
-  min-height: 90px;
-}
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
-
-/************ Projects Css ************/
-.project {
+.karte {
   padding: 80px 0;
   position: relative;
   background-color: black;
-}
-.project h2 {
-	font-size: 45px;
-	font-weight: 700;
-  text-align: center;
-}
-.project p {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
-}
-.project .nav.nav-pills {
-  width: 72%;
-  margin: 0 auto;
-  border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
-.project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+.karte h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  overflow: hidden;
 }
-.project .nav.nav-pills .nav-link {
+.karte p {
+
+  color: #ffffff;
+  font-size: 19px;
+  letter-spacing: 8px;
+  line-height: 1em;
+  margin: 14px auto 30px auto;
+  text-align: left;
+  width: 90%;
+  word-wrap: break-word !important;
+  overflow: hidden;
+
+}
+.karte .nav.nav-pills {
+  width: 90%;
+  margin: 0 auto;
+
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.karte .eatlogo{
+scale: 5%;
+
+
+
+}
+.karte .eatlogo2{
+  margin-top: -40% !important;
+  scale: 5%;
+}
+.karte .eatmenubutton {
+position: absolute;
+  margin-left: 300px;
+
+}
+
+.karte .parallax{
+border-radius: 2vh;
+  background-image: url("assets/img/parallaxbg.jpg");
+  height: 900px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+border: #ffa600 solid 2px;
+  border-radius: 2vh;
+
+}
+.karte .parallaxcontainer{
+  overflow: hidden;
+  box-shadow: 0 0 200px #e69a29;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  border-radius: 2vh;
+  border: #00ffc4 sol;
+}
+
+.karte .nav.nav-pills .nav-item {
+  width: 33.33333%;
+
+}
+.karte .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
@@ -410,7 +452,147 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   z-index: 0;
 }
-.project .nav.nav-pills .nav-link::before {
+.karte .nav.nav-pills .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #aa3636 -5.91%, #bd8b2f 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.karte .nav.nav-pills .nav-link.active::before {
+  width: 100% !important;
+}
+.karte .nav.nav-pills .nav-link.active {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.nav-link#karte-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+.nav-link#karte-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.nav-link#karte-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-link#karte-tabs-tab-four {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+.IMGMDB {
+  size: 900px;
+
+}
+
+.karte .pizzapng {
+  scale: 40%;
+  margin-top: -25%;
+  overflow: hidden;
+
+}
+.karte .eatmenubuttonfix {
+margin-top: -18px;
+
+}
+.karte .eat-button {
+
+
+
+
+
+}
+
+.karte .bestelleonline {
+  position: absolute;
+  margin-top: -600px;
+  margin-left: 495px;
+  font-size: 20pt;
+}
+.karte .price {
+  color: #ff8000;
+}
+.karte .insalatepng {
+  scale: 40%;
+  margin-top: -450px;
+}
+.karte ul {
+  margin-top: -20%;
+
+
+  margin-left: -32px;
+}
+.karte li {
+  max-height: 200px;
+  max-width: 1229.5px;
+  display: grid;
+  position: relative;
+
+  align-items: center;
+  padding: 15px;
+  border-radius: 2vh;
+
+  background-color: rgba(0, 0, 0, 0.62);
+  border: rgba(255, 156, 103, 0.78) solid 1px;
+}
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+
+/************ Projects Css ************/
+.ueberuns {
+  padding: 80px 0;
+  position: relative;
+  background-color: black;
+}
+.ueberuns h2 {
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+}
+.ueberuns p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+.ueberuns .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+}
+.ueberuns .nav.nav-pills .nav-item {
+  width: 33.33333%;
+}
+.ueberuns .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+.ueberuns .nav.nav-pills .nav-link::before {
     content: "";
     position: absolute;
     width: 0;
@@ -421,21 +603,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     z-index: -1;
     transition: 0.3s ease-in-out;
 }
-.project .nav.nav-pills .nav-link.active::before {
+.ueberuns .nav.nav-pills .nav-link.active::before {
     width: 100% !important;
 }
-.project .nav.nav-pills .nav-link.active {
+.ueberuns .nav.nav-pills .nav-link.active {
     border: 1px solid rgba(255, 255, 255, 1);
 }
-.nav-link#projects-tabs-tab-first {
+.nav-link#ueberuns-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
 }
-.nav-link#projects-tabs-tab-second {
+.nav-link#ueberuns-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-.nav-link#projects-tabs-tab-third {
+.nav-link#ueberuns-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }

@@ -7,7 +7,7 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-export const Projects = () => {
+export const Ueberuns = () => {
 
   const projects = [
     {
@@ -43,7 +43,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="projects">
+    <section className="ueberuns" id="projects">
       <Container>
         <Row>
           <Col size={12}>
@@ -52,7 +52,7 @@ export const Projects = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Certifications</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                <Tab.Container id="ueberuns-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     
                     <Nav.Item>
@@ -73,7 +73,7 @@ export const Projects = () => {
                             return (
                               <ProjectCard
                                 key={index}
-                                {...project}
+                                {...Ueberuns}
                                 />
                             )
                           })

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/ufo.png";
+import headerImg from "../assets/img/logo_pizzahaus.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -12,9 +12,9 @@ export const Banner = () => {
   const [delta, setDelta] = useState(600 - Math.random() * 300);
   const [index, setIndex] = useState(1);
   const toRotate = [ 
-    "Web Developer", 
-    "Software Developer", 
-    "AI-Engineer"
+    "Beste Qualtiät",
+    "Gemütliche Atmosphäre",
+    "Fairer Preis"
   ];
   const period = 2000;
 
@@ -60,11 +60,11 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
+                <span className="tagline">Wilkkomen bei Pizza Haus</span>
                 <h1>
-                  {`Hi! I'm Richard`} 
+                  {`Unsere Werte:`}
                 <br></br>
-                  <span className="txt-rotate" dataPeriod="1000" data-rotate='[/n "Web Developer", "Software Developer", "AI-Engineer" ]'>
+                  <span className="txt-rotate" dataPeriod="1000" data-rotate='[/n "Beste Qualitativ", "", "Gemütliche Atmosphäre", Fairer Preis ]'>
                   <span className="wrap">{text}</span>
   </span>
 </h1>
