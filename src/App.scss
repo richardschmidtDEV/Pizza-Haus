@@ -140,6 +140,14 @@ scale: 120%;
 
   color: #00ffc4;
 }
+.logoP{
+  position: absolute;
+  margin-top: -695px;
+  margin-left: -2200px;
+  scale:4%;
+  overflow: hidden;
+
+}
 .navbestellen{
   color: #00ffc4;
   margin-top: 15px;
@@ -363,31 +371,59 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   background-color: black;
   overflow: hidden;
+
+
+
+
+
 }
 .karte h2 {
   font-size: 45px;
   font-weight: 700;
+  opacity: 0;
   text-align: center;
   overflow: hidden;
+  animation: backInRight 1s 1s;
+  animation-fill-mode: forwards;
 }
 .karte p {
-
+position: relative;
   color: #ffffff;
   font-size: 19px;
   letter-spacing: 8px;
   line-height: 1em;
-  margin: 14px auto 30px auto;
+  margin: 0px auto 30px auto;
   text-align: left;
   width: 90%;
   word-wrap: break-word !important;
   overflow: hidden;
+  top: 0%;
+  bottom: 5%;
+  opacity: 0;
+  animation: backInRight 0.5s 0s;
+  animation-fill-mode: forwards;
 
 }
+
+.karte .buttondiv{
+  position: relative;
+text-align: center;
+  border-radius: 2vh;
+
+  scale: 140%;
+  margin: 0px auto -30px auto;
+  margin-top: 300px;
+
+
+}
+
 .karte .nav.nav-pills {
   width: 90%;
   margin: 0 auto;
-
+  animation: backInLeft 1s 0s;
+  animation-fill-mode: forwards;
   top: 0;
+  opacity: 0;
   width: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.1);
@@ -396,18 +432,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .karte .eatlogo{
 scale: 5%;
 
-
-
+  margin: 0px auto 30px auto;
+margin-top: -55%;
 }
-.karte .eatlogo2{
-  margin-top: -40% !important;
-  scale: 5%;
-}
-.karte .eatmenubutton {
-position: absolute;
-  margin-left: 300px;
 
-}
 
 .karte .parallax{
 border-radius: 2vh;
@@ -419,19 +447,18 @@ border-radius: 2vh;
   background-size: cover;
   overflow: scroll;
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+
 border: #ffa600 solid 2px;
+
   border-radius: 2vh;
 
 }
 .karte .parallaxcontainer{
   overflow: hidden;
   box-shadow: 0 0 200px #e69a29;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+
   border-radius: 2vh;
-  border: #00ffc4 sol;
+
 }
 
 .karte .nav.nav-pills .nav-item {
@@ -448,7 +475,7 @@ border: #ffa600 solid 2px;
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
-  transition: 0.3s ease-in-out;
+transition: ease-in ;
   text-align: center;
   z-index: 0;
 }
@@ -485,21 +512,16 @@ border: #ffa600 solid 2px;
   border: 1px solid rgba(255, 255, 255, 0.5);
 
 }
-.IMGMDB {
-  size: 900px;
-
-}
 
 .karte .pizzapng {
   scale: 40%;
   margin-top: -25%;
   overflow: hidden;
+  animation: backInLeft 1s 0.0s;
+  animation-fill-mode: backwards;
 
 }
-.karte .eatmenubuttonfix {
-margin-top: -18px;
 
-}
 .karte .eat-button {
 
 
@@ -508,14 +530,14 @@ margin-top: -18px;
 
 }
 
-.karte .bestelleonline {
-  position: absolute;
-  margin-top: -600px;
-  margin-left: 495px;
-  font-size: 20pt;
-}
+
 .karte .price {
   color: #ff8000;
+
+}
+.karte .description {
+  font-size: 10pt;
+  margin-top: -20px;
 }
 .karte .insalatepng {
   scale: 40%;
@@ -553,20 +575,64 @@ margin-top: -18px;
   padding: 80px 0;
   position: relative;
   background-color: black;
+  margin-top: -600px;
 }
 .ueberuns h2 {
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
 }
+.überunstextcontainer {
+  border: #ff9100 solid 1pt;
+  border-radius: 2vh;
+  box-shadow: 0 0 200px #e69a29;
+}
+
 .ueberuns p {
-  color: #B8B8B8;
+  color: #ffffff;
   font-size: 18px;
   letter-spacing: 0.8px;
-  line-height: 1.5em;
+  line-height: 1.9em;
   margin: 14px auto 30px auto;
   text-align: center;
   width: 56%;
+}
+.ueberuns .container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+
+}
+
+.ueberuns .box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
 }
 .ueberuns .nav.nav-pills {
   width: 72%;
@@ -588,7 +654,7 @@ margin-top: -18px;
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
-  transition: 0.3s ease-in-out;
+
   text-align: center;
   z-index: 0;
 }
@@ -597,11 +663,16 @@ margin-top: -18px;
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #aa3636 -5.91%, #bd8b2f 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
-    transition: 0.3s ease-in-out;
+
+}
+.Lieferzeiten {
+  position: relative;
+  display: flex;
+  text-align: center;
 }
 .ueberuns .nav.nav-pills .nav-link.active::before {
     width: 100% !important;
@@ -634,7 +705,7 @@ margin-top: -18px;
   position: absolute;
   width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out;
+
 }
 .proj-imgbx:hover::before {
   height: 100%;
@@ -645,7 +716,7 @@ margin-top: -18px;
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
+
   opacity: 0;
   width: 100%;
 }

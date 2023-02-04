@@ -6,41 +6,13 @@ import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-
+import Gallery from "../assets/img/gallery.jpg";
+import Gallery2 from "../assets/img/gallery2.jpg";
+import Gallery3 from "../assets/img/gallery3.jpeg";
+import Gallery4 from "../assets/img/gallery4.jpg";
 export const Ueberuns = () => {
 
-  const projects = [
-    {
-      title: "Software Engineering",
-      from: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-  ];
+
 
   return (
     <section className="ueberuns" id="projects">
@@ -49,43 +21,55 @@ export const Ueberuns = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Certifications</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <div>
+                <h2>Über uns</h2>
                 <Tab.Container id="ueberuns-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Software Engineering</Nav.Link>
+                      <Nav.Link eventKey="first">Über uns</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">AI Engineering</Nav.Link>
+                      <Nav.Link eventKey="second">Gallerie</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">IT-Support</Nav.Link>
+                      <Nav.Link eventKey="third">Standort</Nav.Link>
                     </Nav.Item>
                   </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                  <Tab.Content id="slideInUp" >
                     <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...Ueberuns}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
+                        <div className="überunstextcontainer">
+                        <p className="überunstext">                        "Willkommen bei Pizza Haus! Wir sind ein Familienbetrieb, der sich auf die Herstellung authentischer italienischer Pizzen spezialisiert hat. Unsere Pizzen werden mit frischen Zutaten und hausgemachtem Teig zubereitet, um jedem Kunden ein unvergessliches Geschmackserlebnis zu bieten. Wir legen großen Wert auf Qualität und Kundenzufriedenheit. Besuchen Sie uns und genießen Sie unser leckeres Essen bequem von zu Hause aus oder lassen Sie es sich ihr Essen bequemem nach Hause liefern . Garantiert 100% Zufriedenheit!
+                            "Willkommen bei Pizza Haus! Wir sind ein Familienbetrieb, der sich auf die Herstellung authentischer italienischer Pizzen spezialisiert hat. Unsere Pizzen werden mit frischen Zutaten und hausgemachtem Teig zubereitet, um jedem Kunden ein unvergessliches Geschmackserlebnis zu bieten. Wir legen großen Wert auf Qualität und Kundenzufriedenheit. Besuchen Sie uns und genießen Sie unser leckeres Essen bequem von zu Hause aus oder lassen Sie es sich ihr Essen bequemem nach Hause liefern . Garantiert 100% Zufriedenheit!
+                        </p>
+                        </div>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <div className="container">
+                        <div className="box">
+                          <img src={Gallery4}/>
+
+                        </div>
+                        <div className="box">
+                          <img src={Gallery}/>
+
+                        </div>
+                        <div className="box">
+                          <img src={Gallery2}/>
+
+                        </div>
+                        <div className="box">
+                          <img src={Gallery3}/>
+
+                        </div>
+                      </div>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
+<p>Pizza Haus Fehraltdorf
+
+    Allmendstrasse 34a
+    8320 Fehraltorf</p>
+                   </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
               </div>}

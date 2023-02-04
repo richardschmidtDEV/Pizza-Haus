@@ -7,11 +7,10 @@ import { Karte } from "./components/Skills";
 import { Ueberuns } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import OnHoverScrollContainer from "./components/CostumScrollDiv";
 
 function App() {
   return (
-      <OnHoverScrollContainer>
+
     <div className="App">
       <NavBar />
       <Banner />
@@ -21,7 +20,7 @@ function App() {
       <Contact />
       <Footer />
     </div>
-      </OnHoverScrollContainer>
+
   );
 }
 

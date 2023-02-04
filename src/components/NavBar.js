@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Eat from "../assets/img/eat_ch.png";
 import React from "../assets/img/React.png";
+import LogoP from "../assets/img/logo_pizzahaus.png";
 
 export const NavBar = () => {
 
@@ -39,13 +40,17 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-          <span className="rs">Richard Schmidt</span>
+          <span className="rs"></span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
+              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>
+                <img className="logoP" src={LogoP} alt="Logo" />
+              </Nav.Link>
+
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Karte</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Über Uns</Nav.Link>
@@ -55,7 +60,7 @@ export const NavBar = () => {
 
 
 <div className="naveatcontainer">
-             <a href="https://www.eat.ch/restaurant-name" target="_blank" className="social-icon">
+             <a href="https://www.just-eat.ch/speisekarte/pizza-haus-fehraltdorf?_ga=2.186510953.1302748782.1675245889-906275951.1674902005" target="_blank" className="social-icon">
                             <img className="eatlogo" src={Eat} alt="Image"></img> <p className="navbestellen"> Bestelle Online</p></a>
   </div>
               </div>

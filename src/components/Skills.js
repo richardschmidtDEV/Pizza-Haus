@@ -28,8 +28,7 @@ export const Karte = () => {
       items: 2
     }
   };
-let eatbutton = <a href="https://www.eat.ch/restaurant-name" target="_blank" className="eat-button">
-    <img className="eatlogo" src={Eat} alt="Image"></img></a>
+
   return (
 
     <section className="karte" id="skills">
@@ -72,131 +71,131 @@ let eatbutton = <a href="https://www.eat.ch/restaurant-name" target="_blank" cla
                                                                     <li>
 
                                                                         <p>Pizza Margherita</p>
-                                                                        <p>Tomatensauce, Mozzarella</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella</p>
                                                                         <p className="price">15.00-</p>
-                                                                        {eatbutton}
+
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Funghi</p>
-                                                                        <p>Tomatensauce, Mozzarella, Champignons</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Champignons</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Napoletana</p>
-                                                                        <p>Tomatensauce, Mozzarella, Sardellen</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Sardellen</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Siciliana</p>
-                                                                        <p>Tomatensauce, Mozzarella, Oliven, Kapern, Sardellen</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Oliven, Kapern, Sardellen</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Salami</p>
-                                                                        <p>Tomatensauce, Mozzarella, Salami</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Salami</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Prosciutto</p>
-                                                                        <p>Tomatensauce, Mozzarella, Schinken</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Schinken</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Prosciutto é funghi</p>
-                                                                        <p>Tomatensauce, Mozzarella, Schinken, Champignons</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Schinken, Champignons</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Vegetariana</p>
-                                                                        <p>Tomatensauce, Mozzarella, Tagesgenüse</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Tagesgenüse</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Nonno</p>
-                                                                        <p>Tomatensauce, Mozzarella, scharfe Salami, Zwiebeln, Knoblauch</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, scharfe Salami, Zwiebeln, Knoblauch</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Diavola</p>
-                                                                        <p>Tomatensauce, Mozzarella, scharfe Salami, Pepperoni</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, scharfe Salami, Pepperoni</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Pizza House</p>
-                                                                        <p>Tomatensauce, Mozzarella, Rucola, Cherrytomaten, Parmesan</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Rucola, Cherrytomaten, Parmesan</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Rustica</p>
-                                                                        <p>Tomatensauce, Mozzarella, Speck, Zwiebeln, Knoblauch</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Speck, Zwiebeln, Knoblauch</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Tonno</p>
-                                                                        <p>Tomatensauce, Mozzarella, Thunfisch, Zwiebeln</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Thunfisch, Zwiebeln</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Gorgonzola é spinaci</p>
-                                                                        <p>Tomatensauce, Mozzarella, Gorgonzola, Spinat</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Gorgonzola, Spinat</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Contadina</p>
-                                                                        <p>Tomatensauce, Mozzarella, Spinat, Ei, Zwiebeln, Knoblauch</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Spinat, Ei, Zwiebeln, Knoblauch</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Cappricciosa</p>
-                                                                        <p>Tomatensauce, Mozzarella, Schinken, Champignons, Artischocken</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Schinken, Champignons, Artischocken</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Fiorentina</p>
-                                                                        <p>Tomatensauce, Mozzarella, Speck, Zwiebeln, Knoblauch, Spinat</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Speck, Zwiebeln, Knoblauch, Spinat</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Quattro Stagioni</p>
-                                                                        <p>Tomatensauce, Mozzarella, Schinken, Champignons, Pepperoni, Artischocken</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Schinken, Champignons, Pepperoni, Artischocken</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Padrone</p>
-                                                                        <p>Tomatensauce, Mozzarella, Schinken, Champignons, Spinat, Gorgonzola, Knoblauch</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Schinken, Champignons, Spinat, Gorgonzola, Knoblauch</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Parma</p>
-                                                                        <p>Tomatensauce, Mozzarella, Parmaschinken, Rucola</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Parmaschinken, Rucola</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
 
                                                                         <p>Pizza Quattro Formaggi</p>
-                                                                        <p>Vier verschieden Käsesorten</p>
+                                                                        <p className="description">Vier verschieden Käsesorten</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Pollo</p>
-                                                                        <p>Tomatensauce, Mozzarella, Poulet, Pepperoni</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Poulet, Pepperoni</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                     <li>
                                                                         <p>Pizza Pollo</p>
-                                                                        <p>Tomatensauce, Mozzarella, Poulet, Pepperoni</p>
+                                                                        <p className="description">Tomatensauce, Mozzarella, Poulet, Pepperoni</p>
                                                                         <p className="price">15.00-</p>
                                                                     </li>
                                                                 </ul>
@@ -289,10 +288,11 @@ let eatbutton = <a href="https://www.eat.ch/restaurant-name" target="_blank" cla
                             </Row>
                         </Container>
 
+<div className="buttondiv">
+    <a href="https://www.eat.ch/restaurant-name" target="_blank" className="eat-button"><span className="bestellep">Bestelle Online</span>
 
-    <a href="https://www.eat.ch/restaurant-name" target="_blank" className="eat-button">
-                            <img className="eatlogo" src={Eat} alt="Image"></img></a>
-
+                            <img className="eatlogo" src={Eat} alt="Image"></img> </a>
+</div>
                     </div>
                 </div>
             </div>
